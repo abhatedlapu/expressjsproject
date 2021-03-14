@@ -1,0 +1,75 @@
+const express = require('express')
+const router = express.Router()
+const axios = require('axios')
+
+
+router.get("/",(req,res))=>{
+	axios.get("https://api.punkapi.com/v2/beers")
+	.then((response)=>{
+		console.log(response);
+	})
+	.catch((err)=>{
+		console.log(err);
+	})
+
+});
+
+module.exports = router;
+
+const express = require('express')
+const app = express();
+app.get('/', (req, res) => {
+res.send('Welcome to learn backend with express!')
+});
+
+
+var express = require('express');
+const app = express();
+var router = express.Router();
+var request = require('request');
+
+router.get('/', function(req, res, next) {
+  request({
+    uri: 'http://www.giantbomb.com/api/search',
+    qs: {
+      api_key: '123456',
+      query: 'World of Warcraft: Legion'
+    }
+  }).pipe(res);
+});
+
+module.exports = router;
+
+request('http://www.google.com', function (error, response, body) {
+  console.error('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
+});
+
+
+Vagabond Pilsner
+Buzz
+Trashy Blonde
+Berliner Weisse With Yuzu - B-Sides
+Pilsen Lager
+Avery Brown Dredge
+Electric India
+AB:12
+Fake Lager
+AB:07
+Bramling X
+Misspent Youth
+Arcade Nation
+Movember
+Alpha Dog
+Mixtape 8
+Libertine Porter
+AB:06
+Russian Doll – India Pale Ale
+Hello My Name Is Mette-Marit
+Rabiator
+Vice Bier
+Devine Rebel (w/ Mikkeller)
+Storm
+The End Of History
+Bad Pixie
